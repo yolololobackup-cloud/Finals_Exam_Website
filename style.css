@@ -1,0 +1,2349 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Orbitron:wght@500;700;900&family=Press+Start+2P&display=swap');
+
+@font-face {
+    font-family: "BeatTech";
+    src: url("./Fonts/BEATTECH-Line.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "RetroTech";
+    src: url("./Fonts/RETROTECH.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Techno";
+    src: url("./Fonts/Techno.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TechnoLin";
+    src: url("./Fonts/TECHNOLIN.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    min-height: 100vh;
+    color: #4b347f;
+    font-family: Georgia, "Times New Roman", serif;
+    background: linear-gradient(to bottom, #8069c2, #554078 55%, #171020);
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.site-header {
+    position: fixed;
+    z-index: 1000;
+    top: 16px;
+    left: 50%;
+    width: calc(100% - 24px);
+    transform: translateX(-50%);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 62px;
+    padding: 10px 8px;
+    border: 1px solid #d8cff5;
+    border-bottom: 2px solid #8a70d0;
+    background: rgba(251, 249, 255, 0.98);
+}
+
+.nav-link {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 8px 3px;
+    color: #8069c2;
+    font-family: "Techno", sans-serif;
+    font-size: clamp(12px, 2.2vw, 17px);
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.nav-link:hover {
+    color: #4b347f;
+    background: #eee8ff;
+}
+
+.nav-link:focus-visible,
+button:focus-visible {
+    outline: 2px solid #8069c2;
+    outline-offset: 3px;
+}
+
+.page-content {
+    width: calc(100% - 24px);
+    margin: 0 auto;
+    padding: 94px 0 16px;
+}
+
+.hero-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 178px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    border: 1px solid #d8cff5;
+    border-right: 9px solid #8069c2;
+    border-left: 9px solid #8069c2;
+    background:
+        radial-gradient(circle at 95% 5%, rgba(128, 105, 194, 0.10) 0 95px, transparent 96px),
+        radial-gradient(circle at 12% 105%, rgba(128, 105, 194, 0.11) 0 55px, transparent 56px),
+        #fbf9ff;
+}
+
+.hero-banner::before {
+    position: absolute;
+    top: 43%;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background: #8a70d0;
+    content: "";
+}
+
+.hero-banner::after {
+    position: absolute;
+    top: -75px;
+    right: -35px;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: rgba(128, 105, 194, 0.07);
+    content: "";
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 12px 8px 10px;
+    text-align: center;
+}
+
+.hero-eyebrow {
+    position: relative;
+    z-index: 2;
+    color: #4b347f;
+    font-family: "RetroTech", sans-serif;
+    font-size: clamp(20px, 7vw, 42px);
+    font-weight: 900;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.hero-title {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    padding: 0 5px;
+    color: #8069c2;
+    background: #fbf9ff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 12.5vw, 96px);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.045em;
+    white-space: nowrap;
+}
+
+.hero-name {
+    position: relative;
+    z-index: 3;
+    margin-top: 7px;
+    color: #8069c2;
+    font-size: clamp(12px, 2.4vw, 19px);
+    font-weight: bold;
+}
+
+.hero-star {
+    position: absolute;
+    z-index: 2;
+    color: #8069c2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(35px, 6vw, 65px);
+    line-height: 1;
+}
+
+.hero-star-left {
+    top: 12px;
+    left: 15px;
+}
+
+.hero-star-right {
+    right: 17px;
+    bottom: 9px;
+}
+
+.about-section {
+    position: relative;
+    min-height: 460px;
+    margin-bottom: 16px;
+    padding: 20px 24px 24px;
+    overflow: hidden;
+    border: 1px solid #d8cff5;
+    border-left: 5px solid #8069c2;
+    background-color: #fbf9ff;
+    background-image:
+        radial-gradient(ellipse 180px 140px at 3% 105%, rgba(128, 105, 194, 0.13), transparent 72%),
+        radial-gradient(ellipse 130px 170px at 98% 8%, rgba(201, 188, 235, 0.20), transparent 75%),
+        radial-gradient(ellipse 100px 100px at 45% 100%, rgba(222, 214, 244, 0.14), transparent 75%);
+    scroll-margin-top: 100px;
+}
+
+.about-section::before {
+    position: absolute;
+    z-index: 0;
+    bottom: -65px;
+    left: -55px;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: rgba(128, 105, 194, 0.10);
+    content: "";
+    pointer-events: none;
+}
+
+.about-section::after {
+    position: absolute;
+    z-index: 0;
+    top: -105px;
+    right: -125px;
+    width: 440px;
+    height: 440px;
+    border: 5px solid rgba(128, 105, 194, 0.09);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.about-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: start;
+    gap: 28px;
+    width: 100%;
+    min-width: 0;
+}
+
+.about-copy {
+    min-width: 0;
+    padding-top: 8px;
+}
+
+.about-copy h2 {
+    margin-bottom: 20px;
+    color: #35215f;
+    font-family: Orbitron, Arial, sans-serif;
+    font-size: clamp(32px, 5.2vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+}
+
+.about-description {
+    max-width: 680px;
+    color: #8069c2;
+    font-size: clamp(18px, 2.8vw, 28px);
+    line-height: 1.48;
+    overflow-wrap: break-word;
+}
+
+.about-description strong {
+    font-weight: bold;
+}
+
+.about-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+    padding: 0;
+    list-style: none;
+}
+
+.about-skills li {
+    padding: 9px 17px;
+    border: 1px solid #d8cff5;
+    border-radius: 22px;
+    background: #eee8ff;
+    color: #5b438f;
+    font-family: Orbitron, Arial, sans-serif;
+    font-size: clamp(12px, 1.4vw, 15px);
+    font-weight: 700;
+}
+
+.profile-visual {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    padding: 0 0 12px;
+}
+
+.profile-visual::before {
+    position: absolute;
+    z-index: -1;
+    top: -7%;
+    right: -27%;
+    width: 125%;
+    aspect-ratio: 1;
+    border: 5px solid rgba(128, 105, 194, 0.09);
+    border-radius: 50%;
+    background: rgba(220, 210, 243, 0.06);
+    content: "";
+    pointer-events: none;
+}
+
+.profile-visual::after {
+    position: absolute;
+    z-index: -1;
+    bottom: 8%;
+    left: -17%;
+    width: 48%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgba(128, 105, 194, 0.09);
+    content: "";
+    pointer-events: none;
+}
+
+.profile-ring {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 500px);
+    aspect-ratio: 0.86;
+    padding: 7px;
+    border: 5px solid #ece8f3;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.profile-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 48% 48% 14% 48%;
+}
+
+.profile-caption {
+    position: relative;
+    z-index: 2;
+    display: block;
+    flex-shrink: 0;
+    width: min(115%, 540px);
+    height: auto;
+    margin-top: -15px;
+    overflow: visible;
+    fill: #8069c2;
+    font-family: Orbitron, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+}
+
+.hobbies-section,
+.fun-facts-section {
+    position: relative;
+    width: 100%;
+    margin-bottom: 16px;
+    overflow: hidden;
+    border: 1px solid #d8cff5;
+    background-color: #fbf9ff;
+    scroll-margin-top: 100px;
+}
+
+.hobbies-section {
+    padding: 20px 18px 24px;
+    background-image:
+        radial-gradient(ellipse 120px 150px at 0% 20%, rgba(128, 105, 194, 0.14), transparent 75%),
+        radial-gradient(ellipse 160px 105px at 95% 95%, rgba(178, 161, 223, 0.17), transparent 75%),
+        radial-gradient(ellipse 90px 115px at 50% 48%, rgba(222, 214, 244, 0.16), transparent 75%);
+}
+
+.hobbies-section::before,
+.fun-facts-section::before {
+    position: absolute;
+    top: -75px;
+    left: -55px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(128, 105, 194, 0.10);
+    content: "";
+    pointer-events: none;
+}
+
+.hobbies-section::after,
+.fun-facts-section::after {
+    position: absolute;
+    right: 25%;
+    bottom: -65px;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    background: rgba(128, 105, 194, 0.10);
+    content: "";
+    pointer-events: none;
+}
+
+.hobbies-heading {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px, 5vw, 55px);
+    margin-bottom: 18px;
+}
+
+.hobbies-title {
+    color: #8069c2;
+    font-family: "RetroTech", sans-serif;
+    font-size: clamp(30px, 6vw, 66px);
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-align: center;
+    transform: rotate(-3deg);
+}
+
+.carousel-button {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: clamp(42px, 7vw, 70px);
+    height: clamp(42px, 7vw, 70px);
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #8069c2;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.carousel-button:hover {
+    background: #5a438d;
+    transform: scale(1.07);
+}
+
+.hobbies-viewport {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
+
+.hobbies-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: clamp(10px, 2.5vw, 26px);
+}
+
+.hobby-card {
+    position: relative;
+    z-index: 0;
+    min-width: 0;
+    padding: clamp(7px, 1.7vw, 16px);
+    border: clamp(8px, 1.7vw, 16px) solid #8069c2;
+    border-radius: clamp(16px, 2.3vw, 26px);
+    background: #8069c2;
+    box-shadow: 0 3px 6px rgba(36, 23, 71, 0.08);
+    transform: translateY(0) scale(1);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.hobby-card:hover,
+.hobby-card:focus-within {
+    z-index: 3;
+    transform: translateY(-6px) scale(1.015);
+    box-shadow: 0 12px 24px rgba(36, 23, 71, 0.2);
+}
+
+.hobby-card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    min-height: clamp(200px, 38vw, 345px);
+    padding: clamp(10px, 1.6vw, 18px) clamp(5px, 1vw, 12px);
+    border-radius: clamp(12px, 2vw, 20px);
+    background: white;
+    text-align: center;
+}
+
+.hobby-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: clamp(42px, 7vw, 72px);
+    margin-bottom: 8px;
+    font-size: clamp(30px, 5.2vw, 58px);
+    line-height: 1;
+}
+
+.hobby-card h3 {
+    margin-bottom: 9px;
+    color: #5f46a1;
+    font-family: "Techno", sans-serif;
+    font-size: clamp(10px, 1.5vw, 17px);
+    font-weight: 700;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.hobby-card p {
+    color: #4b347f;
+    font-size: clamp(10px, 1.5vw, 18px);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.fun-facts-section {
+    padding: 38px 12px 18px;
+    background-image:
+        radial-gradient(ellipse 150px 130px at 100% 12%, rgba(128, 105, 194, 0.13), transparent 75%),
+        radial-gradient(ellipse 130px 180px at 0% 95%, rgba(184, 169, 225, 0.17), transparent 75%),
+        radial-gradient(ellipse 180px 85px at 62% 100%, rgba(128, 105, 194, 0.10), transparent 75%);
+}
+
+.fun-facts-heading {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    min-height: 70px;
+    margin: 0 12px 22px;
+    padding: 8px 20px;
+    border: 1.5px solid #7656d8;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.75);
+    color: #8069c2;
+}
+
+.fun-facts-heading h2 {
+    flex: 1;
+    font-family: "RetroTech", sans-serif;
+    font-size: clamp(28px, 4.6vw, 48px);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+}
+
+.search-icon {
+    position: relative;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    border: 5px solid #6545bd;
+    border-radius: 50%;
+}
+
+.search-icon::after {
+    position: absolute;
+    right: -10px;
+    bottom: -6px;
+    width: 13px;
+    height: 5px;
+    border-radius: 4px;
+    background: #6545bd;
+    content: "";
+    transform: rotate(48deg);
+    transform-origin: left center;
+}
+
+.search-close {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.facts-grid {
+    --facts-gap: 12px;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - var(--facts-gap)) / 2);
+    grid-template-rows: minmax(0, 1fr);
+    gap: var(--facts-gap);
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+.facts-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.fact-window {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    min-width: 0;
+    padding-top: 26px;
+    border-radius: 12px 12px 0 0;
+    background: #38246f;
+    box-shadow: 0 3px 6px rgba(36, 23, 71, 0.08);
+    transform: translateY(0) scale(1);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    scroll-snap-align: start;
+}
+
+.fact-window:hover,
+.fact-window:focus-within {
+    z-index: 3;
+    transform: translateY(-5px) scale(1.008);
+    box-shadow: 0 10px 22px rgba(36, 23, 71, 0.2);
+}
+
+.window-tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 58%;
+    height: 27px;
+    padding: 0 9px;
+    border-radius: 10px 10px 0 0;
+    background: #2e1d5b;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.window-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 32px;
+    padding: 4px 8px;
+    background: #5c48a3;
+    color: white;
+}
+
+.window-arrows {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    line-height: 1;
+}
+
+.window-address {
+    flex: 1;
+    min-width: 0;
+    height: 20px;
+    border: 1px solid #c6c2d2;
+    background: #f1f0f2;
+}
+
+.window-star {
+    flex-shrink: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    line-height: 1;
+}
+
+.fact-content {
+    min-height: 360px;
+    border: 7px solid #5c48a3;
+    border-top: 0;
+    background: #f0f0f0;
+    color: #49338a;
+}
+
+.fact-content h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    padding: 12px 6px;
+    border-bottom: 1px solid #a9a9a9;
+    color: #8073ae;
+    font-family: "RetroTech", sans-serif;
+    font-size: clamp(17px, 3.2vw, 34px);
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.fact-content ul {
+    padding: 18px 12px 24px 38px;
+    font-family: "Techno", sans-serif;
+    font-size: clamp(13px, 2.1vw, 23px);
+    font-weight: 800;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.fact-content li {
+    padding-left: 1px;
+}
+
+.fact-note {
+    padding: 22px 14px;
+    color: #49338a;
+    font-family: "Techno", sans-serif;
+    font-size: clamp(13px, 1.5vw, 18px);
+    font-weight: 700;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+.facts-scrollbar {
+    position: relative;
+    z-index: 2;
+    height: 30px;
+    margin: 12px 5px -10px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #8073ae;
+    cursor: pointer;
+    touch-action: pan-y;
+    user-select: none;
+}
+
+.facts-scrollbar span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+    background: white;
+    cursor: grab;
+    touch-action: none;
+}
+
+.facts-scrollbar span:active {
+    cursor: grabbing;
+}
+
+.facts-scrollbar:focus-visible {
+    outline: 2px solid #4b347f;
+    outline-offset: 3px;
+}
+
+.skills-section {
+    position: relative;
+    container-type: inline-size;
+    width: 100%;
+    min-height: 0;
+    padding: 20px 0 12px;
+    overflow: hidden;
+    border-left: 1px solid #d8cff5;
+    background-color: #f5f0ff;
+    background-image:
+        radial-gradient(ellipse 145px 180px at 0% 30%, rgba(128, 105, 194, 0.14), transparent 75%),
+        radial-gradient(ellipse 180px 110px at 95% 90%, rgba(188, 174, 228, 0.17), transparent 75%),
+        radial-gradient(ellipse 100px 130px at 54% 0%, rgba(128, 105, 194, 0.09), transparent 75%);
+    scroll-margin-top: 88px;
+}
+
+.skills-section::before {
+    position: absolute;
+    top: -50px;
+    right: -35px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(128, 105, 194, 0.12);
+    content: "";
+    pointer-events: none;
+}
+
+.skills-section::after {
+    position: absolute;
+    bottom: -45px;
+    left: 44%;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: rgba(128, 105, 194, 0.14);
+    content: "";
+    pointer-events: none;
+}
+
+.skills-press {
+    position: absolute;
+    z-index: 4;
+    inset: 0;
+    pointer-events: none;
+}
+
+.press-stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.press-star {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: clamp(44px, 3.6vw, 66px);
+    aspect-ratio: 1;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #e2d9f5;
+    color: #8069c2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(25px, 2.3vw, 40px);
+    line-height: 1;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.press-star:nth-child(1) {
+    top: 8%;
+    left: 4%;
+}
+
+.press-star:nth-child(2) {
+    top: 46%;
+    left: 2.5%;
+}
+
+.press-star:nth-child(3) {
+    bottom: 8%;
+    left: 4%;
+}
+
+.press-label {
+    position: absolute;
+    bottom: 1.5%;
+    left: 4%;
+    color: #8069c2;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.star-cyan[aria-pressed="true"] {
+    color: #00d9f5;
+    box-shadow: 0 0 0 3px #00d9f5;
+}
+
+.star-pink[aria-pressed="true"] {
+    color: #ff00c8;
+    box-shadow: 0 0 0 3px #ff00c8;
+}
+
+.star-gold[aria-pressed="true"] {
+    color: #f6c85f;
+    box-shadow: 0 0 0 3px #f6c85f;
+}
+
+.star-cyan[aria-pressed="true"],
+.star-pink[aria-pressed="true"],
+.star-gold[aria-pressed="true"] {
+    background: #49328a;
+    transform: scale(1.06);
+}
+
+.press-star:hover {
+    transform: translateY(-3px);
+}
+
+.skills-board {
+    --skills-badge-size: 124px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 84%;
+    height: clamp(390px, 25vw, 460px);
+    margin: 0 0.8% 0 auto;
+    padding: 24px 30px;
+    border: 12px solid #241747;
+    border-radius: clamp(150px, 13vw, 225px) 22px 22px clamp(150px, 13vw, 225px);
+    background-color: #fff;
+    background-image:
+        radial-gradient(circle at 17% 50%, rgba(128, 105, 194, 0.055) 0 60px, transparent 62px),
+        radial-gradient(circle at 17% 50%, transparent 0 78px, rgba(128, 105, 194, 0.12) 79px 81px, transparent 83px);
+    box-shadow:
+        0 14px 32px rgba(36, 23, 71, 0.08),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.65);
+}
+
+.skills-board::before {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: calc(17% - 62px);
+    display: grid;
+    place-items: center;
+    width: var(--skills-badge-size);
+    height: var(--skills-badge-size);
+    border: 2px solid #ded4f4;
+    border-radius: 50%;
+    background: radial-gradient(circle, #f5f0ff 0 48%, #e2d9f5 49% 53%, #fff 54%);
+    box-shadow:
+        0 0 0 5px rgba(128, 105, 194, 0.045),
+        inset 0 0 0 4px rgba(128, 105, 194, 0.04);
+    color: #8069c2;
+    content: "08";
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(24px, 2vw, 31px);
+    line-height: 1;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.skills-board::after {
+    position: absolute;
+    z-index: 0;
+    top: calc(50% + 80px);
+    left: calc(17% - 85px);
+    width: 170px;
+    padding-top: 9px;
+    border-top: 2px solid #ded4f4;
+    color: #8069c2;
+    content: "CORE ABILITIES";
+    font-family: "TechnoLin", "Techno", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+    text-align: center;
+    pointer-events: none;
+}
+
+.skills-title {
+    position: relative;
+    width: 62%;
+    margin: 0 0 14px 32%;
+    color: #241747;
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(26px, 4.1cqw, 48px);
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.skills-title::before,
+.skills-title::after {
+    position: absolute;
+    inset: 0;
+    content: attr(data-text);
+    pointer-events: none;
+}
+
+.skills-title::before {
+    color: #00d9f5;
+    clip-path: inset(0 0 48% 0);
+    transform: translate(-2px, -1px);
+}
+
+.skills-title::after {
+    color: #ff00c8;
+    clip-path: inset(52% 0 0 0);
+    transform: translate(2px, 1px);
+}
+
+.skill-list {
+    display: grid;
+    width: 78%;
+    gap: clamp(6px, 0.65cqw, 9px);
+    margin: 0 auto;
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr) 4.5em;
+    align-items: center;
+    gap: clamp(5px, 0.7cqw, 10px);
+    min-width: 0;
+    color: #49328a;
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(8px, 1.15cqw, 14px);
+    font-weight: 400;
+    line-height: 1.5;
+    transition: transform 180ms ease;
+}
+
+.skill-row:hover,
+.skill-row:focus-within {
+    transform: translateX(4px);
+}
+
+.skill-name {
+    min-width: 0;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.skill-row:hover .skill-name,
+.skill-row:focus-within .skill-name {
+    color: #8069c2;
+}
+
+.skill-meter {
+    width: 100%;
+    height: clamp(10px, 1.25cqw, 18px);
+    overflow: hidden;
+    border: 1px solid rgba(73, 50, 138, 0.14);
+    background: repeating-linear-gradient(45deg, #fff 0 3px, #a99acb 3px 4px);
+}
+
+.skill-meter span {
+    display: block;
+    width: var(--level);
+    height: 100%;
+    background-image:
+        repeating-linear-gradient(to right, rgba(255, 255, 255, 0.10) 0 1px, transparent 1px 28px),
+        linear-gradient(90deg, #49328a, #49328a);
+}
+
+.skill-percent {
+    color: #49328a;
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(8px, 1.05cqw, 13px);
+    line-height: 1.5;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.gallery-section {
+    position: relative;
+    min-height: 740px;
+    padding: 24px 18px 30px;
+    overflow: hidden;
+    border: 1px solid #d8cff5;
+    border-bottom: 2px solid #211345;
+    background-color: #f5f0ff;
+    background-image:
+        radial-gradient(ellipse 180px 150px at 0% 25%, rgba(128, 105, 194, 0.14), transparent 75%),
+        radial-gradient(ellipse 140px 180px at 53% 0%, rgba(194, 180, 231, 0.18), transparent 75%),
+        radial-gradient(ellipse 170px 130px at 100% 85%, rgba(128, 105, 194, 0.12), transparent 75%),
+        radial-gradient(ellipse 100px 80px at 28% 100%, rgba(202, 190, 234, 0.16), transparent 75%);
+    scroll-margin-top: 90px;
+}
+
+.gallery-section::before {
+    position: absolute;
+    top: -45px;
+    left: 45%;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: rgba(128, 105, 194, 0.12);
+    content: "";
+    pointer-events: none;
+}
+
+.gallery-section::after {
+    position: absolute;
+    bottom: -45px;
+    left: -40px;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background: rgba(128, 105, 194, 0.13);
+    content: "";
+    pointer-events: none;
+}
+
+.gallery-title {
+    position: relative;
+    z-index: 2;
+    display: table;
+    margin: 0 0 18px 6%;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #49328a;
+    color: #49328a;
+    font-family: "Retrotech", sans-serif;
+    font-size: clamp(42px, 4vw, 50px);
+    font-weight: normal;
+}
+
+.gallery-stage {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    min-width: 0;
+    min-height: 620px;
+    margin: 0 auto;
+    padding-right: 86px;
+}
+
+.gallery-stage::before {
+    position: absolute;
+    z-index: 1;
+    right: 86px;
+    bottom: 0;
+    left: -18px;
+    height: 2px;
+    background: #171717;
+    content: "";
+    pointer-events: none;
+}
+
+.gallery-stage::after {
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    right: 86px;
+    bottom: 0;
+    width: 2px;
+    background: #171717;
+    content: "";
+    pointer-events: none;
+}
+
+.gallery-artworks {
+    position: absolute;
+    inset: 0 86px 0 0;
+    min-width: 0;
+}
+
+.gallery-item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    margin: 0;
+    padding: 9px;
+    overflow: hidden;
+    border: 1px solid rgba(128, 105, 194, 0.65);
+    background: #191919;
+    box-shadow: 0 3px 9px rgba(27, 16, 48, 0.25);
+    transition: transform 0.25s;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #242424;
+}
+
+.gallery-item figcaption {
+    display: none;
+}
+
+.gallery-item-one {
+    z-index: 1;
+    top: 13%;
+    left: 1%;
+    width: clamp(290px, 32vw, 570px);
+    height: clamp(350px, 27vw, 470px);
+    border: 8px solid #171717;
+    transform: rotate(-1deg);
+}
+
+.gallery-item-two {
+    z-index: 3;
+    top: 39%;
+    left: 27%;
+    width: clamp(280px, 31vw, 550px);
+    height: clamp(330px, 26vw, 450px);
+    align-items: flex-start;
+    padding: 9px;
+    border: 8px solid #171717;
+    background: #171717;
+    transform: rotate(0.5deg);
+}
+
+.gallery-item-three {
+    z-index: 2;
+    top: 1%;
+    right: 0;
+    width: clamp(380px, 42vw, 740px);
+    height: clamp(250px, 21vw, 350px);
+    padding: 8px;
+    border: 8px solid #241747;
+    background: #241747;
+    transform: rotate(0.5deg);
+}
+
+.gallery-item-three::before {
+    position: absolute;
+    top: -21px;
+    left: 0;
+    color: #4b347f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10px;
+    text-decoration: underline;
+    white-space: nowrap;
+    content: "Photography";
+}
+
+.gallery-item-one:hover,
+.gallery-item-two:hover,
+.gallery-item-three:hover {
+    z-index: 4;
+    transform: rotate(0) scale(1.01);
+}
+
+.gallery-controls {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    transform: translateY(-50%);
+}
+
+.gallery-control {
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    padding: 0;
+    border: 6px solid #191919;
+    background: #050505;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.gallery-control:hover {
+    background: #49328a;
+    transform: scale(1.04);
+}
+
+.contacts-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    min-height: 110px;
+    padding: 18px 12px;
+    border: 1px solid #d8cff5;
+    background-color: #fbf9ff;
+    background-image:
+        radial-gradient(ellipse 150px 100px at 100% 100%, rgba(128, 105, 194, 0.12), transparent 75%),
+        radial-gradient(ellipse 120px 90px at 0% 0%, rgba(190, 176, 229, 0.16), transparent 75%);
+    scroll-margin-top: 100px;
+}
+
+.contacts-section h2 {
+    color: #49328a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: normal;
+    letter-spacing: 0.04em;
+}
+
+.contacts-section a {
+    color: #8069c2;
+    font-size: clamp(12px, 1.5vw, 16px);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contacts-section a:hover {
+    color: #49328a;
+    text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    .about-section {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .about-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+        align-items: start;
+        gap: 20px;
+    }
+
+    .about-copy {
+        padding-top: 14px;
+    }
+
+    .about-copy h2 {
+        font-size: clamp(30px, 5vw, 46px);
+    }
+
+    .about-description {
+        font-size: clamp(18px, 2.4vw, 24px);
+    }
+
+    .profile-ring {
+        width: min(100%, 380px);
+    }
+
+    .profile-caption {
+        width: 115%;
+        font-size: clamp(12px, 2vw, 18px);
+    }
+
+    .gallery-section {
+        min-height: 700px;
+    }
+
+    .gallery-stage {
+        max-width: none;
+        min-height: 590px;
+        padding-right: 76px;
+    }
+
+    .gallery-stage::before,
+    .gallery-artworks {
+        right: 76px;
+    }
+
+    .gallery-stage::after {
+        right: 76px;
+    }
+
+    .gallery-item-one {
+        width: clamp(250px, 29vw, 340px);
+        height: clamp(320px, 39vw, 430px);
+    }
+
+    .gallery-item-two {
+        left: 25%;
+        width: clamp(240px, 28vw, 330px);
+        height: clamp(310px, 37vw, 410px);
+    }
+
+    .gallery-item-three {
+        width: clamp(330px, 43vw, 480px);
+        height: clamp(220px, 30vw, 310px);
+    }
+
+    .gallery-control {
+        width: 62px;
+        height: 62px;
+        border-width: 5px;
+        font-size: 38px;
+    }
+
+    .skills-board {
+        background-image: none;
+        box-shadow: 0 10px 24px rgba(36, 23, 71, 0.08);
+    }
+
+    .skills-board::before,
+    .skills-board::after {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        top: 15px;
+    }
+
+    .navbar {
+        min-height: 60px;
+        padding: 8px 3px;
+    }
+
+    .nav-link {
+        padding: 8px 1px;
+        font-size: clamp(11px, 3.1vw, 14px);
+    }
+
+    .page-content {
+        padding-top: 90px;
+    }
+
+    .hero-banner {
+        min-height: 155px;
+        margin-bottom: 12px;
+        border-right-width: 7px;
+        border-left-width: 7px;
+    }
+
+    .hero-eyebrow {
+        font-size: clamp(18px, 7vw, 32px);
+    }
+
+    .hero-title {
+        font-size: clamp(39px, 12.5vw, 58px);
+    }
+
+    .hero-name {
+        margin-top: 6px;
+        font-size: clamp(12px, 3.2vw, 16px);
+    }
+
+    .hero-star-left {
+        top: 7px;
+        left: 7px;
+    }
+
+    .hero-star-right {
+        right: 7px;
+        bottom: 5px;
+    }
+
+    .about-section {
+        min-height: 0;
+        padding: 12px 10px 22px;
+    }
+
+    .about-section::after {
+        top: -35px;
+        right: -90px;
+        width: 250px;
+        height: 250px;
+        border-width: 4px;
+    }
+
+    .about-grid {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        align-items: start;
+        gap: 8px;
+    }
+
+    .about-copy {
+        padding-top: 10px;
+    }
+
+    .about-copy h2 {
+        margin-bottom: 12px;
+        font-size: clamp(19px, 5.2vw, 28px);
+    }
+
+    .about-description {
+        font-size: clamp(12px, 2.7vw, 15px);
+        line-height: 1.4;
+    }
+
+    .about-skills {
+        gap: 7px;
+        margin-top: 22px;
+    }
+
+    .about-skills li {
+        padding: 6px 11px;
+        font-size: clamp(9px, 2.4vw, 12px);
+    }
+
+    .profile-visual {
+        width: 100%;
+        padding-bottom: 8px;
+    }
+
+    .profile-ring {
+        width: 100%;
+        max-width: 330px;
+        padding: 5px;
+        border-width: 4px;
+    }
+
+    .profile-image {
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 48% 48% 14% 48%;
+    }
+
+    .profile-caption {
+        width: 115%;
+        margin-top: -10px;
+        font-size: clamp(8px, 2.4vw, 14px);
+        letter-spacing: 0.3px;
+    }
+
+    .profile-visual::before {
+        right: -18%;
+        border-width: 3px;
+    }
+
+    .profile-visual::after {
+        left: -12%;
+    }
+
+    .hobbies-section {
+        padding: 18px 10px 20px;
+    }
+
+    .hobbies-heading {
+        gap: clamp(12px, 4vw, 22px);
+        margin-bottom: 16px;
+    }
+
+    .hobbies-title {
+        font-size: clamp(25px, 7vw, 36px);
+        letter-spacing: 0.02em;
+    }
+
+    .carousel-button {
+        width: clamp(38px, 10vw, 46px);
+        height: clamp(38px, 10vw, 46px);
+        font-size: 30px;
+    }
+
+    .hobbies-grid {
+        gap: 8px;
+    }
+
+    .hobby-card {
+        padding: 3px;
+        border-width: 6px;
+        border-radius: 14px;
+    }
+
+    .hobby-card-inner {
+        min-height: 220px;
+        padding: 10px 4px;
+        border-radius: 9px;
+    }
+
+    .hobby-icon {
+        min-height: 36px;
+        margin-bottom: 7px;
+        font-size: clamp(25px, 7vw, 34px);
+    }
+
+    .hobby-card h3 {
+        margin-bottom: 7px;
+        font-size: clamp(9px, 2.6vw, 12px);
+    }
+
+    .hobby-card p {
+        font-size: clamp(10px, 2.6vw, 12px);
+    }
+
+    .fun-facts-section {
+        padding: 24px 8px 16px;
+    }
+
+    .fun-facts-heading {
+        gap: 14px;
+        min-height: 56px;
+        margin: 0 5px 18px;
+        padding: 7px 14px;
+        border-radius: 12px;
+    }
+
+    .fun-facts-heading h2 {
+        font-size: clamp(25px, 5.2vw, 36px);
+        letter-spacing: 0.04em;
+    }
+
+    .search-icon {
+        flex-basis: 22px;
+        width: 22px;
+        height: 22px;
+        border-width: 4px;
+    }
+
+    .search-icon::after {
+        right: -8px;
+        bottom: -5px;
+        width: 11px;
+        height: 4px;
+    }
+
+    .search-close {
+        font-size: 28px;
+    }
+
+    .facts-grid {
+        --facts-gap: 8px;
+    }
+
+    .fact-window {
+        padding-top: 22px;
+    }
+
+    .window-tab {
+        height: 23px;
+        font-size: 12px;
+    }
+
+    .window-toolbar {
+        gap: 4px;
+        height: 27px;
+        padding: 3px 5px;
+    }
+
+    .window-arrows {
+        gap: 4px;
+        font-size: 19px;
+    }
+
+    .window-address {
+        height: 17px;
+    }
+
+    .window-star {
+        font-size: 21px;
+    }
+
+    .fact-content {
+        min-height: 310px;
+        border-width: 5px;
+    }
+
+    .fact-content h3 {
+        min-height: 74px;
+        padding: 8px 3px;
+        font-size: clamp(14px, 3.3vw, 23px);
+    }
+
+    .fact-content ul {
+        padding: 14px 5px 20px 24px;
+        font-size: clamp(11px, 2.25vw, 15px);
+        line-height: 1.7;
+    }
+
+    .fact-note {
+        padding: 16px 8px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .facts-scrollbar {
+        height: 24px;
+        margin-top: 10px;
+    }
+
+    .skills-section {
+        min-height: 0;
+        padding: 14px 0 10px;
+    }
+
+    .skills-board {
+        width: 90%;
+        height: auto;
+        min-height: 300px;
+        margin-right: 1%;
+        padding: 22px 12px;
+        border-width: 8px;
+        border-radius: 140px 16px 16px 140px;
+    }
+
+    .skills-title {
+        width: 100%;
+        margin: 0 0 14px;
+        font-size: clamp(24px, 5.5cqw, 36px);
+    }
+
+    .skill-list {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .skill-row {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr) 3.8em;
+        gap: 4px;
+        font-size: clamp(8px, 2.2cqw, 12px);
+    }
+
+    .skill-meter {
+        height: 9px;
+    }
+
+    .skill-percent {
+        font-size: clamp(8px, 2.1cqw, 11px);
+    }
+
+    .press-star {
+        width: 42px;
+        font-size: 27px;
+    }
+
+    .press-label {
+        font-size: 10px;
+    }
+
+    .gallery-section {
+        min-height: 480px;
+        padding: 22px 10px 24px;
+    }
+
+    .gallery-title {
+        margin-left: 6%;
+        font-size: clamp(28px, 6vw, 36px);
+    }
+
+    .gallery-stage {
+        max-width: none;
+        min-height: 390px;
+        padding-right: 56px;
+    }
+
+    .gallery-stage::before {
+        right: 56px;
+        left: -10px;
+    }
+
+    .gallery-stage::after {
+        top: -18px;
+        right: 56px;
+    }
+
+    .gallery-artworks {
+        right: 56px;
+    }
+
+    .gallery-item {
+        padding: 6px;
+    }
+
+    .gallery-item-one {
+        top: 20%;
+        left: 0;
+        width: 46%;
+        height: 52%;
+        border-width: 6px;
+    }
+
+    .gallery-item-two {
+        top: 48%;
+        left: 25%;
+        width: 48%;
+        height: 42%;
+        padding: 6px;
+        border-width: 6px;
+    }
+
+    .gallery-item-three {
+        top: 5%;
+        right: 0;
+        width: 62%;
+        height: 38%;
+        padding: 6px;
+        border-width: 6px;
+    }
+
+    .gallery-controls {
+        top: 58%;
+        gap: 14px;
+    }
+
+    .gallery-control {
+        width: 48px;
+        height: 48px;
+        border-width: 4px;
+        font-size: 31px;
+    }
+
+    .contacts-section {
+        min-height: 100px;
+        padding: 15px 10px;
+    }
+
+    .section-placeholder {
+        min-height: 75vh;
+        padding: 24px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        width: calc(100% - 24px);
+    }
+
+    .navbar {
+        min-height: 56px;
+        padding: 7px 2px;
+    }
+
+    .nav-link {
+        padding: 7px 1px;
+        font-size: clamp(10px, 3vw, 13px);
+    }
+
+    .page-content {
+        width: calc(100% - 16px);
+        padding-top: 82px;
+    }
+
+    .hero-banner {
+        min-height: 145px;
+        border-right-width: 6px;
+        border-left-width: 6px;
+    }
+
+    .hero-copy {
+        padding: 12px 3px;
+    }
+
+    .hero-eyebrow {
+        font-size: clamp(17px, 6.8vw, 30px);
+    }
+
+    .hero-title {
+        font-size: clamp(35px, 12vw, 56px);
+    }
+
+    .hero-name {
+        font-size: clamp(11px, 3.2vw, 15px);
+    }
+
+    .hero-star-left {
+        top: 7px;
+        left: 6px;
+    }
+
+    .hero-star-right {
+        right: 6px;
+        bottom: 5px;
+    }
+
+    .about-section {
+        padding: 12px 9px 20px;
+    }
+
+    .about-section::after {
+        top: -25px;
+        right: -85px;
+        width: 230px;
+        height: 230px;
+        border-width: 3px;
+    }
+
+    .about-grid {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: 6px;
+    }
+
+    .about-copy {
+        padding-top: 8px;
+    }
+
+    .about-copy h2 {
+        margin-bottom: 10px;
+        font-size: clamp(17px, 5vw, 23px);
+    }
+
+    .about-description {
+        font-size: clamp(11px, 3vw, 13px);
+        line-height: 1.4;
+    }
+
+    .about-skills {
+        gap: 6px;
+        margin-top: 20px;
+    }
+
+    .about-skills li {
+        padding: 5px 9px;
+        font-size: clamp(8px, 2.3vw, 11px);
+    }
+
+    .profile-ring {
+        max-width: 220px;
+        padding: 4px;
+    }
+
+    .profile-image {
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 48% 48% 14% 48%;
+    }
+
+    .profile-caption {
+        width: 115%;
+        margin-top: -8px;
+        font-size: clamp(8px, 2.4vw, 11px);
+        letter-spacing: 0;
+    }
+
+    .hobbies-section {
+        padding: 16px 6px 18px;
+    }
+
+    .hobbies-heading {
+        gap: clamp(10px, 3.5vw, 20px);
+        margin-bottom: 14px;
+    }
+
+    .hobbies-title {
+        font-size: clamp(22px, 6.5vw, 32px);
+        letter-spacing: 0.01em;
+    }
+
+    .carousel-button {
+        width: clamp(35px, 9vw, 43px);
+        height: clamp(35px, 9vw, 43px);
+        font-size: 27px;
+    }
+
+    .hobbies-grid {
+        gap: 6px;
+    }
+
+    .hobby-card {
+        padding: 2px;
+        border-width: 5px;
+        border-radius: 12px;
+    }
+
+    .hobby-card-inner {
+        min-height: 205px;
+        padding: 8px 3px;
+        border-radius: 7px;
+    }
+
+    .hobby-icon {
+        min-height: 36px;
+        margin-bottom: 6px;
+    }
+
+    .hobby-card h3 {
+        margin-bottom: 6px;
+        font-size: clamp(9px, 2.5vw, 11px);
+    }
+
+    .hobby-card p {
+        font-size: clamp(10px, 2.5vw, 12px);
+        line-height: 1.35;
+    }
+
+    .fun-facts-section {
+        padding: 20px 5px 14px;
+    }
+
+    .fun-facts-heading {
+        gap: 11px;
+        min-height: 49px;
+        margin: 0 3px 14px;
+        padding: 6px 11px;
+        border-radius: 10px;
+    }
+
+    .fun-facts-heading h2 {
+        font-size: clamp(23px, 5.8vw, 30px);
+        letter-spacing: 0.02em;
+    }
+
+    .search-icon {
+        flex-basis: 20px;
+        width: 20px;
+        height: 20px;
+        border-width: 4px;
+    }
+
+    .search-icon::after {
+        right: -8px;
+        bottom: -5px;
+        width: 10px;
+        height: 4px;
+    }
+
+    .search-close {
+        font-size: 25px;
+    }
+
+    .facts-grid {
+        --facts-gap: 6px;
+    }
+
+    .fact-window {
+        padding-top: 20px;
+    }
+
+    .window-tab {
+        height: 21px;
+    }
+
+    .window-toolbar {
+        gap: 3px;
+        height: 24px;
+        padding: 3px 4px;
+    }
+
+    .window-arrows {
+        gap: 3px;
+        font-size: 17px;
+    }
+
+    .window-address {
+        height: 15px;
+    }
+
+    .window-star {
+        font-size: 18px;
+    }
+
+    .fact-content {
+        min-height: 300px;
+        border-width: 4px;
+    }
+
+    .fact-content h3 {
+        min-height: 70px;
+        font-size: clamp(12px, 3.4vw, 17px);
+        line-height: 1.35;
+    }
+
+    .fact-content ul {
+        padding: 12px 3px 18px 20px;
+        font-size: clamp(10px, 2.6vw, 13px);
+        line-height: 1.75;
+    }
+
+    .fact-note {
+        padding: 16px 8px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .facts-scrollbar {
+        height: 20px;
+        margin: 9px 3px -5px;
+    }
+
+    .skills-section {
+        padding: 10px 0 8px;
+    }
+
+    .skills-board {
+        width: 91%;
+        min-height: 280px;
+        height: auto;
+        padding: 20px 8px;
+        border-width: 6px;
+        border-radius: 115px 12px 12px 115px;
+    }
+
+    .skills-title {
+        width: 100%;
+        margin-bottom: 13px;
+        font-size: clamp(20px, 5.5cqw, 27px);
+    }
+
+    .skill-list {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .skill-row {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) 3.7em;
+        gap: 3px;
+        font-size: clamp(7px, 2.2cqw, 9px);
+    }
+
+    .skill-meter {
+        height: 8px;
+    }
+
+    .skill-percent {
+        font-size: clamp(7px, 2cqw, 9px);
+    }
+
+    .press-star {
+        width: 36px;
+        font-size: 24px;
+    }
+
+    .press-label {
+        font-size: 9px;
+    }
+
+    .gallery-section {
+        min-height: 420px;
+        padding: 18px 8px 20px;
+    }
+
+    .gallery-title {
+        margin-bottom: 12px;
+        font-size: 30px;
+        font-family: "Retrotech", sans-serif;
+    }
+
+    .gallery-stage {
+        max-width: none;
+        min-height: 340px;
+        padding-right: 50px;
+    }
+
+    .gallery-stage::before {
+        right: 50px;
+        left: -8px;
+    }
+
+    .gallery-stage::after {
+        right: 50px;
+    }
+
+    .gallery-artworks {
+        right: 50px;
+    }
+
+    .gallery-item {
+        padding: 4px;
+    }
+
+    .gallery-item-one {
+        top: 22%;
+        left: 0;
+        width: 49%;
+        height: 52%;
+        border-width: 5px;
+    }
+
+    .gallery-item-two {
+        top: 49%;
+        left: 24%;
+        width: 50%;
+        height: 41%;
+        padding: 4px;
+        border-width: 5px;
+    }
+
+    .gallery-item-three {
+        top: 6%;
+        right: 0;
+        width: 65%;
+        height: 38%;
+        padding: 4px;
+        border-width: 5px;
+    }
+
+    .gallery-controls {
+        top: 57%;
+        gap: 10px;
+    }
+
+    .gallery-control {
+        width: 38px;
+        height: 38px;
+        border-width: 3px;
+        font-size: 25px;
+    }
+
+    .contacts-section {
+        min-height: 90px;
+        padding: 12px 8px;
+    }
+
+    .contacts-section h2 {
+        font-size: 22px;
+    }
+
+    .contacts-section a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 350px) {
+    .hero-eyebrow {
+        font-size: 16px;
+    }
+
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .about-section {
+        padding-right: 7px;
+        padding-left: 7px;
+    }
+
+    .about-grid {
+        gap: 5px;
+    }
+
+    .about-copy h2 {
+        font-size: 16px;
+    }
+
+    .about-description {
+        font-size: 10.5px;
+    }
+
+    .about-skills {
+        gap: 4px;
+    }
+
+    .about-skills li {
+        padding: 4px 7px;
+        font-size: 8px;
+    }
+
+    .profile-caption {
+        font-size: 8px;
+        letter-spacing: 0;
+    }
+
+    .hobbies-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hobby-card-inner {
+        min-height: 195px;
+    }
+
+    .hobby-card h3,
+    .hobby-card p {
+        font-size: 11px;
+    }
+
+    .fact-content ul {
+        padding-left: 17px;
+        font-size: 10px;
+    }
+
+    .fact-content h3 {
+        font-size: 11px;
+    }
+
+    .facts-scrollbar {
+        height: 18px;
+    }
+
+    .skills-section {
+        padding-top: 8px;
+    }
+
+    .skills-board {
+        min-height: 260px;
+        padding: 16px 5px;
+        border-width: 5px;
+        border-radius: 100px 10px 10px 100px;
+    }
+
+    .skills-title {
+        font-size: 18px;
+    }
+
+    .skill-row {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) 3.5em;
+        gap: 2px;
+        font-size: 6.5px;
+    }
+
+    .skill-meter {
+        height: 7px;
+    }
+
+    .skill-percent {
+        font-size: 6.5px;
+    }
+
+    .press-star {
+        width: 32px;
+        font-size: 21px;
+    }
+
+    .gallery-stage {
+        min-height: 300px;
+        padding-right: 36px;
+    }
+
+    .gallery-stage::before,
+    .gallery-stage::after {
+        right: 36px;
+    }
+
+    .gallery-stage::before {
+        left: -8px;
+    }
+
+    .gallery-artworks {
+        right: 36px;
+    }
+
+    .gallery-item-one {
+        width: 47%;
+        height: 52%;
+    }
+
+    .gallery-item-two {
+        height: 41%;
+    }
+
+    .gallery-item-three {
+        width: 68%;
+        height: 38%;
+    }
+
+    .gallery-control {
+        width: 31px;
+        height: 31px;
+        font-size: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .nav-link,
+    .carousel-button,
+    .gallery-control,
+    .gallery-item,
+    .hobby-card,
+    .fact-window,
+    .press-star,
+    .skill-row {
+        transition: none;
+    }
+}

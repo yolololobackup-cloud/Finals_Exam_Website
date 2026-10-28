@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8069c2">
+    <title>Kurt John E. Jimenez | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#about" class="nav-link">About Me</a>
+            <a href="#background" class="nav-link">Background</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#contacts" class="nav-link">Contacts</a>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="hero-banner" id="home">
+            <span class="hero-star hero-star-left" aria-hidden="true">★</span>
+            <div class="hero-copy">
+                <p class="hero-eyebrow">WELCOME TO MY</p>
+                <h1 class="hero-title">PORTFOLIO</h1>
+                <p class="hero-name">Kurt John E. Jimenez</p>
+            </div>
+            <span class="hero-star hero-star-right" aria-hidden="true">★</span>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="about-grid">
+                <div class="about-copy">
+                    <h2>ABOUT ME</h2>
+                    <p class="about-description">
+                        I'm <strong>Kurt John E. Jimenez</strong>, an aspiring
+                        software developer who's always goal driven and eager
+                        to push the boundaries of innovation. Energy is my
+                        motto, and learning new technologies is my go-to.
+                        I believe that passion and determination drive people
+                        toward success, and I'm fortunate to possess both.
+                    </p>
+
+                    <ul class="about-skills">
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>HTML</li>
+                    </ul>
+                </div>
+
+                <div class="profile-visual">
+                    <div class="profile-ring">
+                        <img
+                            src="images/Profile.png"
+                            alt="Portrait of Kurt John E. Jimenez"
+                            class="profile-image"
+                        >
+                    </div>
+
+                    <svg
+                        class="profile-caption"
+                        viewBox="0 0 500 150"
+                        role="img"
+                        aria-label="Aspiring software developer"
+                    >
+                        <defs>
+                            <path
+                                id="profile-caption-curve"
+                                d="M 20 20 Q 250 155 480 20"
+                            />
+                        </defs>
+                        <text>
+                            <textPath
+                                href="#profile-caption-curve"
+                                startOffset="50%"
+                                text-anchor="middle"
+                            >ASPIRING SOFTWARE DEVELOPER</textPath>
+                        </text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="hobbies-section" id="background">
+            <div class="hobbies-heading">
+                <button
+                    class="carousel-button"
+                    id="prev-hobby"
+                    type="button"
+                    aria-label="Previous hobby"
+                >←</button>
+
+                <h2 class="hobbies-title">HOBBIES</h2>
+
+                <button
+                    class="carousel-button"
+                    id="next-hobby"
+                    type="button"
+                    aria-label="Next hobby"
+                >→</button>
+            </div>
+
+            <div class="hobbies-viewport">
+                <div class="hobbies-grid" id="hobby-cards" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="fun-facts-section" id="fun-facts">
+            <div class="fun-facts-heading">
+                <span class="search-icon" aria-hidden="true"></span>
+                <h2>Fun Facts</h2>
+                <span class="search-close" aria-hidden="true">×</span>
+            </div>
+
+            <div class="facts-grid" id="facts-grid">
+                <article class="fact-window">
+                    <div class="window-tab"><span>×</span></div>
+                    <div class="window-toolbar">
+                        <div class="window-arrows" aria-hidden="true">
+                            <span>‹</span><span>›</span>
+                        </div>
+                        <div class="window-address"></div>
+                        <span class="window-star" aria-hidden="true">☆</span>
+                    </div>
+                    <div class="fact-content">
+                        <h3>PERSONAL<br>TRAITS</h3>
+                        <ul>
+                            <li>Tenacious</li>
+                            <li>Creative</li>
+                            <li>Outgoing</li>
+                            <li>Extroverted</li>
+                            <li>HIGH amount of Energy</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="fact-window">
+                    <div class="window-tab"><span>×</span></div>
+                    <div class="window-toolbar">
+                        <div class="window-arrows" aria-hidden="true">
+                            <span>‹</span><span>›</span>
+                        </div>
+                        <div class="window-address"></div>
+                        <span class="window-star" aria-hidden="true">☆</span>
+                    </div>
+                    <div class="fact-content">
+                        <h3>LIKES</h3>
+                        <ul>
+                            <li>Arts</li>
+                            <li>Gaming</li>
+                            <li>Lavender</li>
+                            <li>Butterflies</li>
+                            <li>Stars</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="fact-window">
+                    <div class="window-tab"><span>×</span></div>
+                    <div class="window-toolbar">
+                        <div class="window-arrows" aria-hidden="true">
+                            <span>‹</span><span>›</span>
+                        </div>
+                        <div class="window-address"></div>
+                        <span class="window-star" aria-hidden="true">☆</span>
+                    </div>
+                    <div class="fact-content">
+                        <h3>TALENTS</h3>
+                        <ul>
+                            <li>Literature</li>
+                            <li>Writing</li>
+                            <li>Good Gymnast</li>
+                            <li>Chess Prodigy</li>
+                            <li>Social Deductions</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="fact-window">
+                    <div class="window-tab"><span>×</span></div>
+                    <div class="window-toolbar">
+                        <div class="window-arrows" aria-hidden="true">
+                            <span>‹</span><span>›</span>
+                        </div>
+                        <div class="window-address"></div>
+                        <span class="window-star" aria-hidden="true">☆</span>
+                    </div>
+                    <div class="fact-content">
+                        <h3>DISLIKES</h3>
+                        <ul>
+                            <li>Noisy Places</li>
+                            <li>Boring Days</li>
+                            <li>Being Misunderstood</li>
+                            <li>Unnecessary Complications</li>
+                            <li>Poor Communication</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="fact-window">
+                    <div class="window-tab"><span>×</span></div>
+                    <div class="window-toolbar">
+                        <div class="window-arrows" aria-hidden="true">
+                            <span>‹</span><span>›</span>
+                        </div>
+                        <div class="window-address"></div>
+                        <span class="window-star" aria-hidden="true">☆</span>
+                    </div>
+                    <div class="fact-content">
+                        <h3>BUTTERFLIES<br>&amp; STARS</h3>
+                        <p class="fact-note">
+                            I have a special adoration for butterflies and stars.
+                            I once tried buying a star to name it, although I couldn't.
+                            Although my dreams of buying a star never faded.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div
+                class="facts-scrollbar"
+                id="facts-scrollbar"
+                role="scrollbar"
+                aria-label="Browse Fun Facts"
+                aria-controls="facts-grid"
+                aria-orientation="horizontal"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                tabindex="0"
+            >
+                <span id="facts-scrollbar-thumb"></span>
+            </div>
+        </section>
+
+        <section class="skills-section" id="skills">
+            <div class="skills-press">
+                <div class="press-stars">
+                    <button
+                        class="press-star star-cyan"
+                        type="button"
+                        aria-label="Toggle cyan star"
+                        aria-pressed="false"
+                    >★</button>
+                    <button
+                        class="press-star star-pink"
+                        type="button"
+                        aria-label="Toggle pink star"
+                        aria-pressed="false"
+                    >★</button>
+                    <button
+                        class="press-star star-gold"
+                        type="button"
+                        aria-label="Toggle gold star"
+                        aria-pressed="false"
+                    >★</button>
+                </div>
+                <span class="press-label">Press</span>
+            </div>
+
+            <div class="skills-board">
+                <h2 class="skills-title" data-text="SKILLS">SKILLS</h2>
+
+                <div class="skill-list">
+                    <div class="skill-row">
+                        <span class="skill-name">CODING</span>
+                        <div class="skill-meter" role="progressbar" aria-label="Coding" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <span style="--level: 50%"></span>
+                        </div>
+                        <span class="skill-percent">50%</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="skill-name">UI DESIGN</span>
+                        <div class="skill-meter" role="progressbar" aria-label="UI Design" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                            <span style="--level: 65%"></span>
+                        </div>
+                        <span class="skill-percent">65%</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="skill-name">PROBLEM SOLVING</span>
+                        <div class="skill-meter" role="progressbar" aria-label="Problem Solving" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <span style="--level: 80%"></span>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="skill-name">CREATIVITY</span>
+                        <div class="skill-meter" role="progressbar" aria-label="Creativity" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <span style="--level: 80%"></span>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="skill-name">TEAMWORK</span>
+                        <div class="skill-meter" role="progressbar" aria-label="Teamwork" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                            <span style="--level: 85%"></span>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="skill-name">SOCIABILITY</span>
+                        <div class="skill-meter" role="progressbar" aria-label="Sociability" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                            <span style="--level: 90%"></span>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="skill-name">ADAPTABILITY</span>
+                        <div class="skill-meter" role="progressbar" aria-label="Adaptability" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                            <span style="--level: 100%"></span>
+                        </div>
+                        <span class="skill-percent">100%</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="skill-name">LEADERSHIP</span>
+                        <div class="skill-meter" role="progressbar" aria-label="Leadership" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                            <span style="--level: 70%"></span>
+                        </div>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="gallery">
+            <h2 class="gallery-title">Gallery</h2>
+
+            <div class="gallery-stage">
+                <div class="gallery-artworks">
+                    <figure class="gallery-item gallery-item-one">
+                        <img src="images/gallery/gallery-1.png" alt="Artwork one">
+                        <figcaption>Artwork One</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item gallery-item-two">
+                        <img src="images/gallery/gallery-2.gif" alt="Artwork two">
+                        <figcaption>Artwork Two</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item gallery-item-three">
+                        <img src="images/gallery/gallery-3.png" alt="Photography">
+                        <figcaption>Photography</figcaption>
+                    </figure>
+                </div>
+
+                <div class="gallery-controls">
+                    <button
+                        class="gallery-control"
+                        id="gallery-prev"
+                        type="button"
+                        aria-label="Previous gallery item"
+                    >↤</button>
+                    <button
+                        class="gallery-control"
+                        id="gallery-next"
+                        type="button"
+                        aria-label="Next gallery item"
+                    >↦</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts-section" id="contacts">
+            <h2>Contact me:</h2>
+            <a href="mailto:jimenezkurt2@gmail.com">@jimenezkurt2@gmail.com</a>
+            <a href="tel:09686634953">09686634953</a>
+        </section>
+    </main>
+</body>
+</html>
